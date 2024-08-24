@@ -6,7 +6,6 @@
     <title>Brenton Nguyen's Portfolio</title>
     <link rel="stylesheet" href="style.css"> 
     <link rel="stylesheet" href="mediaqueries.css"> 
-    
 </head>
 <body>
     <nav id="desktop-nav">
@@ -47,7 +46,7 @@
         <div class="btn-container">
             <button
                 class="btn btn-color-2"
-                onclick="window.open(href='./assets/brentonnguyenresume.pdf')"; 
+                onclick="window.open('./assets/brentonnguyenresume.pdf', '_blank')"; 
                 > 
                 Download Resume
             </button>
@@ -60,11 +59,11 @@
         </div>
         <div id="socials-container">
             <img src="./assets/linkedin.png" alt="My LinkedIn Profile";
-            class="icon" onclick="location.href='https://www.linkedin.com/in/brenton-nguyen-634943310/'";
+            class="icon" onclick="window.open('https://www.linkedin.com/in/brenton-nguyen-634943310/', '_blank')";
             />
 
             <img src="./assets/github.png" alt="My GitHub Profile";
-            class="icon" onclick="location.href='https://github.com/brentonnguyen'";
+            class="icon" onclick="window.open('https://github.com/brentonnguyen', '_blank')";
             />
         </div>
     </section>
@@ -185,11 +184,11 @@
                 </div>
                 <h2 class="experience-sub-title project-title">CSCI 102 Final Website</h2>
                 <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/brentonnguyen/project-final-csci102'">
+                    <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/brentonnguyen/project-final-csci102', '_blank')">
                         Github
                     </button>
 
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://reworkmoving.netlify.app'">
+                    <button class="btn btn-color-2 project-btn" onclick="window.open('https://reworkmoving.netlify.app', '_blank')">
                         Live Demo
                     </button>
                 </div>
@@ -202,11 +201,11 @@
                 </div>
                 <h2 class="experience-sub-title project-title">Project Two</h2>
                 <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+                    <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/', '_blank')">
                         Github
                     </button>
 
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+                    <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/', '_blank')">
                         Live Demo
                     </button>
                 </div>
@@ -219,11 +218,11 @@
                 </div>
                 <h2 class="experience-sub-title project-title">Project Three</h2>
                 <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+                    <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/', '_blank')">
                         Github
                     </button>
 
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+                    <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/', '_blank')">
                         Live Demo
                     </button>
                 </div>
@@ -231,38 +230,56 @@
         </div>
     </div>
     <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow"
-        onclick="location.href='./#projects'"
-    />
+        onclick="location.href='./#contact'"
+        />
     </section>
     <section id="contact">
-        <p class="section__text__p1">Get in Touch</p>
         <h1 class="title">Contact Me</h1>
-        <div class="contact-info-upper-container">
-            <div class="contact-info-container">
-                <img src="./assets/email.png" alt="email icon" class="icon contact-icon">
-                <p><a href="mailto:brentonnguyen@students.highline.edu">brentonnguyen@students.highline.edu</a></p>
-            </div>
-
-            <div class="contact-info-container">
-                <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon">
-                <p><a href="https://www.linkedin.com">LinkedIn</a></p>
+        <div class="section-container">
+            <form action="https://formsubmit.co/brentonnguyen403@gmail.com" method="POST" class="contact-form">
+                <div class="form-item">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required />
+                </div>
+                <div class="form-item">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required />
+                </div>
+                <div class="form-item">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-color-2 submit-btn">Send Message</button>
+            </form>
+            <div class="contact-details">
+                <h3>My Contact Information</h3>
+                <p>
+                    <span>Email: </span> <a href="mailto:brentonnguyen403@gmail.com">brentonnguyen403@gmail.com</a>
+                </p>
+                <p>
+                    <span>Phone: </span> 206-424-0565
+                </p>
+                <div id="contact-socials">
+                    <img src="./assets/linkedin.png" alt="My LinkedIn Profile"
+                    class="icon" onclick="window.open('https://www.linkedin.com/in/brenton-nguyen-634943310/', '_blank')";
+                    />
+                    <img src="./assets/github.png" alt="My GitHub Profile"
+                    class="icon" onclick="window.open('https://github.com/brentonnguyen', '_blank')";
+                    />
+                </div>
             </div>
         </div>
+        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow"
+        onclick="location.href='./#profile'"
+        />
     </section>
-    <footer>
-       <nav>
-        <div class="nav-links-container">
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-       </nav> 
-       <p>Copyright &#169; 2024 Brenton Nguyen. All Rights Reserved.</p>
+    <footer id="footer">
+        <p>
+            <a href="./assets/brentonnguyenresume.pdf" target="_blank"
+                >Resume</a>
+            <span>&copy; 2024</span> Brenton Nguyen
+        </p>
     </footer>
     <script src="script.js"></script>
 </body>
 </html>
-
